@@ -1,12 +1,19 @@
-import React from "react"; // Main React.js library
+//Importa (traemos) la biblioteca React, ahora podemos utilizar JSX
+import React from "react";
 
-import ReactDOM from "react-dom"; // We use ReactDOM to render into the DOM
+//Importa(traemos) la biblioteca ReactDom, sirve para poner contenido igual que innerHTML
+import ReactDOM from "react-dom";
 
-// WHAT: This variable contains the html to render
-let output = <span>James is 12 years old</span>;
+//QUÉ: La variable output contiene el HTML que se va a mostrar en el navegador (renderizar)
+let output = (
+	<span>
+		James is <strong>12</strong> years old
+	</span>
+);
 
-// WHERE: A DOM element that will contain the entire react generated html
+//DÓNDE: Dónde se mostrará el contenido hecho por react, en este caso la variable output
 const myDiv = document.querySelector("#myDiv");
 
-                //what  //where
+//qué  //dónde
 ReactDOM.render(output, myDiv);
+//Básicamente le decimos que queremos añadir contenido (output) en myDiv
